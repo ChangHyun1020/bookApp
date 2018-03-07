@@ -2,10 +2,7 @@
 
 @section('style')
     <style type="text/css">
-        body {
-            background-color: green;
-            color: white;
-        }
+
     </style>
 @endsection
 
@@ -16,6 +13,6 @@
 
 @section('script')
     <script type="text/javascript">
-        alert("자식 뷰의 스크립트")
+        //alert("자식 뷰의 스크립트")
     </script>
 @endsection

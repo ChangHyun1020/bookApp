@@ -3,6 +3,6 @@
 		<p>footer</p>
 	</footer>
 	<script type="text/javascript">
-		alert("footer script");
+		//alert("footer script");
 	</script>
 @endsection
