@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\Http\Requests\ArticlesRequest;
 
 class ArticlesController extends Controller
 {
@@ -13,7 +14,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = \App\Article::with('user')->latest()->paginate(3);
+        $articles = \App\Article::with('user')->latest()->paginate(5);
 
         return view('articles.index', [
             'articles' => $articles
@@ -27,7 +28,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return __METHOD__;
+        return view('articles.create');
     }
 
     /**
@@ -36,9 +37,14 @@ class ArticlesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ArticlesRequest $request)
     {
-        return __METHOD__ .'input form-date and new create articles colection';
+        $article = \App\User::find(1)->articles()->create($request->all());
+        if(!$article) {
+            return back()->with('flash_message','Not Save Article')->withInput();
+        }
+
+        return redirect(route('articles.index'))->with('flash_message', 'Success Save Article');
     }
 
     /**
