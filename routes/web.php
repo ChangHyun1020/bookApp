@@ -20,3 +20,8 @@ Route::resource('articles', 'ArticlesController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Event::listen('article.created', function ($article) {
+// 	var_dump('이벤트를 던졌습니다. 받은 데이터(상태)입니다.');
+// 	var_dump($article->toArray());
+// });

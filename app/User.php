@@ -27,6 +27,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected $dates = [
+        'last_login'
+    ];
+
 
     //relation
     public function articles()
