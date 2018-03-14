@@ -20,6 +20,7 @@ class ComposerStaticInit5bca6e171c0b3b4b17d69d9af5b5deff
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         '4a1f389d6ce373bda9e57857d3b61c84' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/helpers.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'b4e3f29b106af37a2bb239f73cdf68c7' => __DIR__ . '/../..' . '/app/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -366,6 +367,7 @@ class ComposerStaticInit5bca6e171c0b3b4b17d69d9af5b5deff
         'App\\Article' => __DIR__ . '/../..' . '/app/Article.php',
         'App\\Author' => __DIR__ . '/../..' . '/app/Author.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Documentation' => __DIR__ . '/../..' . '/app/Documentation.php',
         'App\\Events\\ArticleCreated' => __DIR__ . '/../..' . '/app/Events/ArticleCreated.php',
         'App\\Events\\ArticlesEvent' => __DIR__ . '/../..' . '/app/Events/ArticlesEvent.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',

@@ -9,6 +9,7 @@ return array(
     'App\\Article' => $baseDir . '/app/Article.php',
     'App\\Author' => $baseDir . '/app/Author.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Documentation' => $baseDir . '/app/Documentation.php',
     'App\\Events\\ArticleCreated' => $baseDir . '/app/Events/ArticleCreated.php',
     'App\\Events\\ArticlesEvent' => $baseDir . '/app/Events/ArticlesEvent.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
