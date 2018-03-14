@@ -16,6 +16,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name', 'email', 'password',
+        'confrim_code', 'activated'
     ];
 
     /**
@@ -25,10 +26,15 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password', 'remember_token',
+        'confrim_code', 'activated', 'last_login'
     ];
 
     protected $dates = [
         'last_login'
+    ];
+
+    protected $casts = [
+        'activated' => 'boolean',
     ];
 
 
