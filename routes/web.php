@@ -25,3 +25,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 // 	var_dump('이벤트를 던졌습니다. 받은 데이터(상태)입니다.');
 // 	var_dump($article->toArray());
 // });
+
+Route::get('/mail', function () {
+	$article = App\Article::with('user')->find(1);
+	return Mail::send(
+		'emails.articles.created',
+		compact('article'),
+		function($message) use ($article) {
+			$message->to('ckdgus941020@naver.com'); //받는 사람의 주소
+			$message->subject('Create New Article -'. $article->title);
+		}
+	);
+});
