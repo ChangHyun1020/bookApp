@@ -13,6 +13,12 @@
 
 Route::get('/', 'WelcomeController@index');
 
+/* 언어 선택 */
+Route::get('locale', [
+    'as' => 'locale',
+    'uses' => 'WelcomeController@locale',
+]);
+
 Route::resource('articles', 'ArticlesController');
 // DB::listen(function ($query){
 // 	var_dump($query->sql);
