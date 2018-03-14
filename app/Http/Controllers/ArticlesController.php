@@ -59,7 +59,8 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-        return __METHOD__;
+        $article = \App\Article::findOrFail($id);
+        return $article->toArray();
     }
 
     /**
